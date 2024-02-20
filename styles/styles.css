@@ -1,0 +1,309 @@
+:root {
+    --color-dark-purple: rgb(205, 180, 219);
+    --color-light-pink: rgb(255, 200, 221);
+    --color-pink: rgb(255, 175, 204);
+    --color-light-blue: rgb(189, 224, 254);
+    --color-blue: rgb(162, 210, 255);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--color-light-blue)
+}
+
+main {
+    color: white;
+    background: linear-gradient(180deg, var(--color-blue) 0%, var(--color-blue) 7%, var(--color-light-blue)7%, var(--color-light-blue) 100%);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar rightside";
+    height: 100vh;
+    font-family: "Mochiy Pop One", sans-serif;
+ 
+}
+
+
+/* HEADER */
+header {
+    grid-area: header;
+    background-color: var(--color-blue);
+    border-radius: 0 0px 50px 50px;
+}
+
+.navbar-up {
+    display: flex;
+    gap: 10px;
+    padding-top: 1%;
+}
+
+.search-bar-items {
+    gap: 1%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 3%;
+}
+
+input {
+    flex-grow: 1;
+    border: none;
+    background-color: white;
+    border-radius: 15px;
+    height: 25px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: var(--color-blue);
+    padding-left: 1%;
+}
+
+input:focus {
+    border: var(--color-light-pink) solid 1px;
+    outline: var(--color-light-pink) solid 1px;
+}
+
+.right-side-navbar-up {
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    gap: 20px;
+    padding-right: 5%;
+    font-family: "Mochiy Pop One", sans-serif;
+}
+
+.navbar-up img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.object {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    left: 280px;
+}
+
+
+.navbar-down {
+    display: flex;
+    padding-top: 1.5%;
+    padding-bottom: 10px;
+}
+
+
+.navbar-down img {
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--color-pink);
+}
+
+.navbar-welcome {
+    padding-left: 3%;
+    display: flex;
+    gap: 1%;
+    flex-grow: 1;
+}
+
+.navbar-welcome div {
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.navbar-welcome h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    padding-top: 5%;
+}
+
+.navbar-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 5%;
+}
+
+
+.navbar-buttons button {
+    border-radius: 20px;
+    padding: 10px 30px;
+    border: none;
+    background-color: var(--color-pink);
+    font-family: "Mochiy Pop One", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    width: 130px;
+    text-align: center;
+}
+
+.navbar-buttons button:hover{
+    cursor:pointer;
+    color: var(--color-pink);
+    background-color: white;
+}
+/* SIDEBAR*/
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-dark-purple);
+    border-radius: 0px 50px 50px 0px;
+    padding-right: 50px;
+
+}
+
+.sidebar ul {
+    display: grid;
+    gap: 15px;
+    padding-left: 10%;
+    padding-top: 20%;
+
+}
+
+.sidebar li {
+    height: 30px;
+    font-family: "Mochiy Pop One", sans-serif;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.sidebar li:hover {
+    color: var(--color-light-pink);
+    cursor: pointer;
+}
+
+h1 {
+    padding-top: 3%;
+    padding-left: 10%;
+    font-size: 2rem;
+    color: var(--color-light-pink);
+    font-family: "Mochiy Pop One", sans-serif;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+/* MAIN SECTION RIGHT*/
+
+.right-side {
+    grid-area: rightside;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding-top: 30px;
+    background-color: var(--color-light-blue);
+    padding-right: 3%;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    font-family: "Mochiy Pop One", sans-serif;
+}
+.projects h2{
+    font-size: 1.5rem;
+    padding-left:20px;
+}
+.projects p{
+    font-family: "Hachi Maru Pop", cursive;
+    font-size: 1rem;
+    padding-top: 10px;
+   
+}
+.projects ul {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.projects li {
+    height: 200px;
+    background-color: var(--color-light-pink);
+    border-left: 15px solid var(--color-pink);
+    border-radius: 30px;
+    display: grid;
+    align-content: center;
+    padding: 40px;
+}
+.project-icons{
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+    padding-top: 5%;
+}
+
+
+svg {
+    width: 30px;
+    fill: white;
+}
+
+.announcements ul {
+    background-color: var(--color-light-pink);
+    display: flex;
+    flex-direction: column;
+    padding: 0 9%;
+    gap: 25px;
+    padding-top: 25px;
+    border-radius: 30px;
+    
+}
+.announcements h2 {
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.announcements li p{
+    font-family: "Hachi Maru Pop", cursive;
+    font-size: 1rem;
+    padding-bottom: 25px;
+    border-bottom: 1px solid white;
+}
+.announcements>ul :last-child p {
+    border-bottom: none;
+}
+
+.trending {
+    padding-bottom: 50px;
+}
+
+.trending ul {
+    background-color: var(--color-light-pink);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5% 9%;
+   
+}
+.trending li {
+display: flex;
+gap: 5%;
+align-items: center;
+}
+.trending-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+.trending-text p{
+    font-family: "Hachi Maru Pop", cursive; 
+    
+}
+.trending img {
+    border-radius: 50px;
+    width: 50px;
+}
+.trending h2 {
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+}
