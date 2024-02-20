@@ -26,7 +26,6 @@ main {
         "sidebar rightside";
     height: 100vh;
     font-family: "Mochiy Pop One", sans-serif;
- 
 }
 
 
@@ -143,11 +142,12 @@ input:focus {
     text-align: center;
 }
 
-.navbar-buttons button:hover{
-    cursor:pointer;
+.navbar-buttons button:hover {
+    cursor: pointer;
     color: var(--color-pink);
     background-color: white;
 }
+
 /* SIDEBAR*/
 
 .sidebar {
@@ -155,7 +155,6 @@ input:focus {
     background-color: var(--color-dark-purple);
     border-radius: 0px 50px 50px 0px;
     padding-right: 50px;
-
 }
 
 .sidebar ul {
@@ -163,7 +162,6 @@ input:focus {
     gap: 15px;
     padding-left: 10%;
     padding-top: 20%;
-
 }
 
 .sidebar li {
@@ -195,6 +193,7 @@ h1 {
     grid-area: rightside;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr;
     gap: 20px;
     padding-top: 30px;
     background-color: var(--color-light-blue);
@@ -205,16 +204,19 @@ h1 {
     grid-row: 1 / 3;
     font-family: "Mochiy Pop One", sans-serif;
 }
-.projects h2{
+
+.projects h2 {
     font-size: 1.5rem;
-    padding-left:20px;
+    padding-left: 20px;
 }
-.projects p{
+
+.projects p {
     font-family: "Hachi Maru Pop", cursive;
     font-size: 1rem;
     padding-top: 10px;
-   
+
 }
+
 .projects ul {
     display: grid;
     gap: 20px;
@@ -222,7 +224,6 @@ h1 {
     justify-items: center;
     align-items: center;
     padding: 20px;
-
 }
 
 .projects li {
@@ -234,7 +235,8 @@ h1 {
     align-content: center;
     padding: 40px;
 }
-.project-icons{
+
+.project-icons {
     display: flex;
     gap: 15px;
     justify-content: end;
@@ -255,19 +257,20 @@ svg {
     gap: 25px;
     padding-top: 25px;
     border-radius: 30px;
-    
 }
+
 .announcements h2 {
     padding-bottom: 20px;
     font-size: 1.5rem;
 }
 
-.announcements li p{
+.announcements li p {
     font-family: "Hachi Maru Pop", cursive;
     font-size: 1rem;
     padding-bottom: 25px;
     border-bottom: 1px solid white;
 }
+
 .announcements>ul :last-child p {
     border-bottom: none;
 }
@@ -283,26 +286,30 @@ svg {
     flex-direction: column;
     gap: 10px;
     padding: 5% 9%;
-   
 }
+
 .trending li {
-display: flex;
-gap: 5%;
-align-items: center;
+    display: flex;
+    gap: 5%;
+    align-items: center;
 }
-.trending-text{
+
+.trending-text {
     display: flex;
     flex-direction: column;
     gap: 2%;
 }
-.trending-text p{
-    font-family: "Hachi Maru Pop", cursive; 
-    
+
+.trending-text p {
+    font-family: "Hachi Maru Pop", cursive;
+
 }
+
 .trending img {
     border-radius: 50px;
     width: 50px;
 }
+
 .trending h2 {
     padding-bottom: 20px;
     font-size: 1.5rem;
